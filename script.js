@@ -70,7 +70,7 @@ function waitAndResponce(inputText) {
     switch (inputText.toLowerCase().trim()) {
         case "intro":
             setTimeout(() => {
-                sendTextMessage("Type something");
+                sendTextMessage("Type something.");
             }, 2000);
             break;
         case "clear":
@@ -80,7 +80,7 @@ function waitAndResponce(inputText) {
             sendTextMessage("You want to check my projects? Then just jump into my Github Account.<br><br><div class='social'><a target='_blank' href='https://github.com/dcode-denpa'> <div class='socialItem'><img class='socialItemI' src='images/github.svg' alt=''></div> </a></div>");
             break;
         default:
-       fetch(`https://simsimi.info/api/?text=${inputText}&lc=id`).then(res => res.json()).then(teks =>{
+       fetch(`https://simsimi.info/api/?text=${inputText.toLowerCase().trim()}&lc=id`).then(res => res.json()).then(teks =>{
             sendTextMessage(`${teks.success}`)
             })
             break;
