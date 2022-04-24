@@ -81,7 +81,7 @@ function waitAndResponce(inputText) {
         default:
         var fetch = require('node-fetch')
         fetch(`https://simsimi.info/api/?text=hallo&lc=id`).then(res => res.json()).then(teks =>{
-            sendTextMessage(`${teks.success}`)
+            sendTextMessage(teks.success)
             })
             break;
     }
