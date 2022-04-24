@@ -1,0 +1,17 @@
+{
+  "name": "SimSimi",
+  "version": "0.0.1",
+  "author": "Denis Putra",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcode-denpa/dcode-denpa.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dcode-denpa"
+  },
+  "homepage": "https://github.com/dcode-denpa/dcode-denpa.github.io"
+}

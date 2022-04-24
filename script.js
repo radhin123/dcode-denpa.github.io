@@ -69,7 +69,7 @@ function waitAndResponce(inputText) {
     switch (inputText.toLowerCase().trim()) {
         case "intro":
             setTimeout(() => {
-                sendTextMessage("Type something!!!");
+                sendTextMessage("Type something");
             }, 2000);
             break;
         case "clear":
@@ -79,8 +79,10 @@ function waitAndResponce(inputText) {
             sendTextMessage("You want to check my projects? Then just jump into my Github Account.<br><br><div class='social'><a target='_blank' href='https://github.com/dcode-denpa'> <div class='socialItem'><img class='socialItemI' src='images/github.svg' alt=''></div> </a></div>");
             break;
         default:
-        sendTextMessage("not found")
-            
+        var fetch = require('node-fetch')
+        fetch(`https://simsimi.info/api/?text=hallo&lc=id`).then(res => res.json()).then(teks =>{
+            sendTextMessage(`${teks.success}`)
+            })
             break;
     }
 
