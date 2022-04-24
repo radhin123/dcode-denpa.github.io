@@ -70,7 +70,7 @@ function waitAndResponce(inputText) {
     switch (inputText.toLowerCase().trim()) {
         case "intro":
             setTimeout(() => {
-                sendTextMessage("Type something.");
+                sendTextMessage("Type something");
             }, 2000);
             break;
         case "clear":
@@ -81,7 +81,7 @@ function waitAndResponce(inputText) {
             break;
         default:
         fetch(`https://simsimi.info/api/?text=hallo&lc=id`).then(res => res.json()).then(teks =>{
-            sendTextMessage(`${teks.success}`)
+            sendTextMessage("not found")
             })
             break;
     }
